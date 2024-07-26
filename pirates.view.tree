@@ -1,0 +1,6 @@
+$pirates $mol_view
+	sub /
+		<= Camera $pirates_camera
+			event => event
+
+$pirates_entity $mol_view

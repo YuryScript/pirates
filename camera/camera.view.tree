@@ -1,0 +1,15 @@
+$pirates_camera $pirates_entity
+	event *
+		^
+		wheel? <=> event_wheel? null
+		keydown? <=> event_key? null
+	sub /
+		<= Test $pirates_sprite
+			asset_pathname \/pirates/assets/effects/explosion1.png
+			position *
+				x 200
+				y 100
+		<= Test2 $pirates_sprite
+			angle 1.4
+		<= Test3 $pirates_ship
+
