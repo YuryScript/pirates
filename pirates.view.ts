@@ -9,6 +9,7 @@ namespace $.$$ {
 				this.time(now)
 				this.delta_time(deltaTime)
 
+				// 
 				// const updateQueue = [...this.sub()]
 				// for(const sub of updateQueue) {
 				// 	if (sub?.update) {
