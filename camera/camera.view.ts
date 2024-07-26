@@ -1,6 +1,6 @@
 namespace $.$$ {
 	
-	export class $pirates_camera extends $.$mol_view {
+	export class $pirates_camera extends $.$pirates_camera {
 
 		dom_name(): string {
 			return 'camera'

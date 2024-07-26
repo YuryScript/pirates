@@ -1,6 +1,6 @@
 namespace $.$$ {
 	
-	export class $pirates_sprite extends $.$pirates_entity {
+	export class $pirates_sprite extends $.$pirates_sprite {
 		@ $mol_mem
 		asset_pathname(next: string = '/pirates/assets/icons/flair_disabled_cross_outline.svg') {
 			return next
