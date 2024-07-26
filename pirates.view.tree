@@ -1,5 +1,11 @@
 $pirates $mol_view
+	context /
+		delta_time
 	sub /
 		<= Camera $pirates_camera
+			position *
+				x 300
+				y 190
 			event => event
+			delta_time <=> delta_time
 

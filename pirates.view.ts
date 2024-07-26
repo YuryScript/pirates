@@ -7,15 +7,15 @@ namespace $.$$ {
 				const now = Date.now()
 				const deltaTime = now - this.time()
 				this.time(now)
-				this.deltaTime(deltaTime)
+				this.delta_time(deltaTime)
 
-				const updateQueue = [...this.sub()]
-				for(const sub of updateQueue) {
-					if (sub instanceof $pirates_entity) {
-						updateQueue.push(...sub.sub())
-						sub.update(deltaTime)
-					}
-				}
+				// const updateQueue = [...this.sub()]
+				// for(const sub of updateQueue) {
+				// 	if (sub?.update) {
+				// 		updateQueue.push(...sub.sub())
+				// 		sub.update(deltaTime)
+				// 	}
+				// }
 				requestAnimationFrame(tick)
 			}
 			requestAnimationFrame(tick)
@@ -32,7 +32,7 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		deltaTime(next = 0) {
+		delta_time(next = 0) {
 			return next
 		}
 	}

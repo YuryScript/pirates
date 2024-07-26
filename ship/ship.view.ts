@@ -26,8 +26,9 @@ namespace $.$$ {
 			return this.hp() <= 0
 		}
 
+		// @ $mol_mem
 		// update() {
-		// 	this.angle( this.angle() + 0.01 )
+		// 	this.angle( this.angle() - 0.01 )
 		// }
 	}
 }

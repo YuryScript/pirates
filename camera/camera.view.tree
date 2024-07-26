@@ -9,7 +9,10 @@ $pirates_camera $mol_view
 			position *
 				x 200
 				y 100
+			delta_time <=> delta_time
 		<= Test2 $pirates_sprite
 			angle 1.4
+			delta_time <=> delta_time
 		<= Test3 $pirates_ship
+			delta_time <=> delta_time
 

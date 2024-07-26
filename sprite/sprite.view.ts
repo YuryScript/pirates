@@ -58,8 +58,14 @@ namespace $.$$ {
 			}
 		}
 
+		@ $mol_mem
+		delta_time(next = 0) {
+			return next
+		}
+
 		update() {
-			this.angle( this.angle() + 0.01 )
+			console.log('update')
+			this.angle( (this.angle() + 0.01) * this.delta_time() )
 		}
 	}
 }

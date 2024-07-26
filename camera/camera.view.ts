@@ -7,7 +7,7 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		position(next = new $pirates_math_vector2(300, 190)) {
+		position(next = new $pirates_math_vector2()) {
 			return next
 		}
 
@@ -19,10 +19,6 @@ namespace $.$$ {
 		@ $mol_mem
 		zoom(next = 1) {
 			return next
-		}
-
-		localToGlobalPosition(position = new $pirates_math_vector2) {
-			return position
 		}
 
 		style(): { [key: string]: string | number; } {
@@ -67,9 +63,8 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		logger() {
-			console.log( this.position() )
-			console.log( this.zoom() )
+		delta_time(next = 0) {
+			return next
 		}
 	}
 }
