@@ -1,6 +1,6 @@
 namespace $.$$ {
 	
-	export class $pirates_sprite extends $.$pirates_sprite {
+	export class $pirates_sprite extends $.$pirates_entity {
 		@ $mol_mem
 		asset_pathname(next: string = '/pirates/assets/icons/flair_disabled_cross_outline.svg') {
 			return next
@@ -37,6 +37,7 @@ namespace $.$$ {
 
 		@ $mol_mem
 		render_position() {
+			return this.position()
 			return new $pirates_math_vector2(
 				this.position().x - this.subtract_width().x,
 				this.position().y - this.subtract_width().y

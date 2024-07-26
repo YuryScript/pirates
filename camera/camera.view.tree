@@ -1,4 +1,4 @@
-$pirates_camera $pirates_entity
+$pirates_camera $mol_view
 	event *
 		^
 		wheel? <=> event_wheel? null

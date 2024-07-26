@@ -3,4 +3,3 @@ $pirates $mol_view
 		<= Camera $pirates_camera
 			event => event
 
-$pirates_entity $mol_view

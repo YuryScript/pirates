@@ -1,6 +1,6 @@
 namespace $.$$ {
 	
-	export class $pirates_ship extends $.$pirates_ship {
+	export class $pirates_ship extends $.$pirates_sprite {
 		@ $mol_mem
 		asset_pathname(next: string = '/pirates/assets/ships/ship1.png') {
 			return next
