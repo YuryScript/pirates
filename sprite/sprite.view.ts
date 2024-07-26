@@ -37,6 +37,7 @@ namespace $.$$ {
 
 		@ $mol_mem
 		render_position() {
+			return this.position()
 			return new $pirates_math_vector2(
 				this.position().x - this.subtract_width().x,
 				this.position().y - this.subtract_width().y
