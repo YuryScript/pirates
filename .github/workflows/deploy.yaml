@@ -23,10 +23,9 @@ jobs:
     - uses: hyoo-ru/mam_build@master2
       with:
         package: 'pirates' #FIXME namespace of this package
-        modules: 'app' #FIXME which modules to build, remove line if only on module at the root
     
     #FIXME remove one of the following
     - uses: hyoo-ru/gh-deploy@v4.4.1
       if: github.ref == 'refs/heads/master'
       with:
-        folder: 'pirates/app/-' #FIXME path to build app
+        folder: 'pirates/-' #FIXME path to build app
