@@ -48,9 +48,10 @@ namespace $.$$ {
 
 		@ $mol_mem
 		angle(next = 0) {
-			return next
+			return next % Math.PI
 		}
 
+		@ $mol_mem
 		style(): { [key: string]: string | number; } {
 			const pos = this.render_position()
 			return {
@@ -60,15 +61,14 @@ namespace $.$$ {
 			}
 		}
 
-		@ $mol_action
+		@ $mol_mem
 		update() {
-			console.log('update')
-			this.angle( (this.angle() + 0.01) * this.delta_time() )
+			this.angle( (this.angle() + 0.001 * this.delta_time()) )
 		}
 
-		@ $mol_wire_method
+		@ $mol_mem
 		log() {
-			console.log(this.delta_time())
+			// console.log(this.delta_time())
 		}
 	}
 }

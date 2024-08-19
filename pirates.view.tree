@@ -4,7 +4,7 @@ $pirates $mol_view
 	debug? true
 	sub /
 		<= Camera $pirates_camera
-			- position? $pirates_math_vector2 /
+			position? <= positionT? $pirates_math_vector2 /
 				300
 				190
 			delta_time? <=> delta_time?

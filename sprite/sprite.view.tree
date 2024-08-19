@@ -3,3 +3,6 @@ $pirates_sprite $mol_view
 	angle? 0
 	position? $pirates_math_vector2
 	asset_pathname? \/pirates/assets/icons/flair_disabled_cross_outline.svg
+	auto /
+		<= update
+		<= log

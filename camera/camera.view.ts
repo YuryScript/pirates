@@ -16,6 +16,7 @@ namespace $.$$ {
 			return next
 		}
 
+		@ $mol_mem
 		style(): { [key: string]: string | number; } {
 			const pos = this.position()
 			return {
@@ -58,7 +59,7 @@ namespace $.$$ {
 			}
 		}
 
-		@ $mol_action
+		@ $mol_mem
 		update() {
 			console.log('update')
 			this.position().add(new $pirates_math_vector2(0.1 * this.delta_time(), 0))
@@ -66,7 +67,7 @@ namespace $.$$ {
 
 		@ $mol_mem
 		log() {
-			console.log(this.delta_time())
+			// console.log(this.delta_time())
 		}
 	}
 }
