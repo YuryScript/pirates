@@ -22,13 +22,13 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		dead() {
+		isDead() {
 			return this.hp() <= 0
 		}
 
-		// @ $mol_mem
-		// update() {
-		// 	this.angle( this.angle() - 0.01 )
-		// }
+		@ $mol_action
+		update() {
+			this.angle( (this.angle() - 0.01) * this.delta_time() )
+		}
 	}
 }

@@ -1,1 +1,5 @@
-$pirates_sprite $pirates_entity
+$pirates_sprite $mol_view
+	delta_time? 0
+	angle? 0
+	position? $pirates_math_vector2
+	asset_pathname? \/pirates/assets/icons/flair_disabled_cross_outline.svg

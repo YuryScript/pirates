@@ -19,11 +19,13 @@ namespace $.$$ {
 		@ $mol_mem
 		anchor(next = new $pirates_math_vector2(0.5, 0.5)) {
 			return next
+			$mol_book2
 		}
 
 		@ $mol_mem
 		subtract_width() {
-			const node = this.dom_node()
+			const node = this.dom_node() as HTMLImageElement
+			const src = node.src
 			return new $pirates_math_vector2(
 				node.clientWidth * this.anchor().x,
 				node.clientHeight * this.anchor().x
@@ -39,8 +41,8 @@ namespace $.$$ {
 		render_position() {
 			return this.position()
 			return new $pirates_math_vector2(
-				this.position().x - this.subtract_width().x,
-				this.position().y - this.subtract_width().y
+					this.position().x - this.subtract_width().x,
+					this.position().y - this.subtract_width().y
 			)
 		}
 
@@ -58,14 +60,15 @@ namespace $.$$ {
 			}
 		}
 
-		@ $mol_mem
-		delta_time(next = 0) {
-			return next
-		}
-
+		@ $mol_action
 		update() {
 			console.log('update')
 			this.angle( (this.angle() + 0.01) * this.delta_time() )
+		}
+
+		@ $mol_wire_method
+		log() {
+			console.log(this.delta_time())
 		}
 	}
 }

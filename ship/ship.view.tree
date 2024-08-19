@@ -1,2 +1,3 @@
 $pirates_ship $pirates_sprite
-
+	delta_time? 0
+	angle? 0

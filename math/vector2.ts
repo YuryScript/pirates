@@ -1,4 +1,4 @@
-namespace $.$$ {
+namespace $ {
 	
 	export class $pirates_math_vector2 {
 

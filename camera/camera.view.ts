@@ -1,11 +1,6 @@
 namespace $.$$ {
 	
 	export class $pirates_camera extends $.$pirates_camera {
-
-		dom_name(): string {
-			return 'camera'
-		}
-
 		@ $mol_mem
 		position(next = new $pirates_math_vector2()) {
 			return next
@@ -30,6 +25,7 @@ namespace $.$$ {
 			}
 		}
 
+		@ $mol_action
 		event_wheel( event : WheelEvent ) {
 			if( event.defaultPrevented ) return
 
@@ -62,9 +58,15 @@ namespace $.$$ {
 			}
 		}
 
+		@ $mol_action
+		update() {
+			console.log('update')
+			this.position().add(new $pirates_math_vector2(0.1 * this.delta_time(), 0))
+		}
+
 		@ $mol_mem
-		delta_time(next = 0) {
-			return next
+		log() {
+			console.log(this.delta_time())
 		}
 	}
 }

@@ -1,18 +1,21 @@
 $pirates_camera $mol_view
+	dom_name \camera
+	delta_time? 0
+	position? $pirates_math_vector2
 	event *
-		^
 		wheel? <=> event_wheel? null
 		keydown? <=> event_key? null
 	sub /
 		<= Test $pirates_sprite
-			asset_pathname \/pirates/assets/effects/explosion1.png
-			position *
-				x 200
-				y 100
-			delta_time <=> delta_time
-		<= Test2 $pirates_sprite
-			angle 1.4
-			delta_time <=> delta_time
-		<= Test3 $pirates_ship
-			delta_time <=> delta_time
+			asset_pathname? \/pirates/assets/effects/explosion1.png
+			- position? $pirates_math_vector2 /
+				200
+				100
+			delta_time? <=> delta_time?
+		- <= Test2 $pirates_sprite
+			angle? 1.4
+			delta_time? <=> delta_time?
+		- <= Test3 $pirates_ship
+			angle? 2.3
+			delta_time? <=> delta_time?
 

@@ -1,4 +1,4 @@
-namespace $.$$ {
+namespace $ {
 	
 	export class $pirates_math_circle {
 
@@ -16,5 +16,22 @@ namespace $.$$ {
 			const distance = this.position().distance(circle.position())
 			return distance < this.radius() + circle.radius()
 		}
+
+		top() {
+			return this.position().y - this.radius()
+		}
+
+		right() {
+			return this.position().x + this.radius()
+		}
+
+		bottom() {
+			return this.position().y + this.radius()
+		}
+
+		left() {
+			return this.position().x - this.radius()
+		}
+
 	}
 }
