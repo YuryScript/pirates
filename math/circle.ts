@@ -12,9 +12,16 @@ namespace $ {
 			return next
 		}
 
-		isIntersecting(circle: $pirates_math_circle) {
-			const distance = this.position().distance(circle.position())
-			return distance < this.radius() + circle.radius()
+		area(): number {
+			return (this.radius() > 0) ? Math.PI * this.radius() * this.radius() : 0
+		}
+		
+		intersectCircle(circle: $pirates_math_circle): boolean {
+			return this.position().distance(circle.position()) < this.radius() + circle.radius()
+		}
+	
+		intersectPoint(point: $pirates_math_vector2): boolean {
+			return this.position().distance(point) < this.radius()
 		}
 
 		top() {

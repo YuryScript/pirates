@@ -1,6 +1,7 @@
 namespace $.$$ {
 	
 	export class $pirates_sprite extends $.$pirates_sprite {
+
 		@ $mol_mem
 		asset_pathname(next: string = '/pirates/assets/icons/flair_disabled_cross_outline.svg') {
 			return next
@@ -10,25 +11,25 @@ namespace $.$$ {
 			return 'img'
 		}
 
-		attr(): {} {
-			return {
-				src: this.asset_pathname(),
+		@ $mol_mem
+		onLoad() {
+			const node = this.dom_node() as HTMLImageElement
+			node.onload = () => {
+				this.subtract_width(node.clientWidth, node.clientHeight)
 			}
+			node.src = this.asset_pathname()
 		}
 
 		@ $mol_mem
 		anchor(next = new $pirates_math_vector2(0.5, 0.5)) {
 			return next
-			$mol_book2
 		}
 
 		@ $mol_mem
-		subtract_width() {
-			const node = this.dom_node() as HTMLImageElement
-			const src = node.src
+		subtract_width(width = 0, height = 0) {
 			return new $pirates_math_vector2(
-				node.clientWidth * this.anchor().x,
-				node.clientHeight * this.anchor().x
+				width * this.anchor().x,
+				height * this.anchor().x
 			)
 		}
 
@@ -39,10 +40,9 @@ namespace $.$$ {
 
 		@ $mol_mem
 		render_position() {
-			return this.position()
 			return new $pirates_math_vector2(
-					this.position().x - this.subtract_width().x,
-					this.position().y - this.subtract_width().y
+				this.position().x - this.subtract_width().x,
+				this.position().y - this.subtract_width().y
 			)
 		}
 
@@ -52,7 +52,7 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		style(): { [key: string]: string | number; } {
+		style(): { [key: string]: string | number } {
 			const pos = this.render_position()
 			return {
 				left: pos.x + 'px',
@@ -70,5 +70,7 @@ namespace $.$$ {
 		log() {
 			// console.log(this.delta_time())
 		}
+
+	
 	}
 }

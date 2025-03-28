@@ -1,7 +1,8 @@
 $pirates_camera $mol_view
 	dom_name \camera
-	delta_time? 0
+	delta_time? 1
 	position? $pirates_math_vector2
+	zoom? 1
 	auto /
 		<= update
 		<= log
@@ -19,6 +20,9 @@ $pirates_camera $mol_view
 			angle? 1.4
 			delta_time? <=> delta_time?
 		<= Test3 $pirates_ship
+			position? <= positionA? $pirates_math_vector2 /
+				100
+				100
 			angle? 2.3
 			delta_time? <=> delta_time?
 

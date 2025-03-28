@@ -12,12 +12,12 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		max_hp( next = 100 ) {
+		max_hp(next = 100) {
 			return next
 		}
 
 		@ $mol_mem
-		hp( next = this.max_hp() ) {
+		hp(next = this.max_hp()) {
 			return next
 		}
 
@@ -26,9 +26,17 @@ namespace $.$$ {
 			return this.hp() <= 0
 		}
 
-		@ $mol_action
+		@ $mol_mem
+		targetPostion( next = new $pirates_math_vector2()) {
+
+		}
+
+		@ $mol_mem
 		update() {
-			this.angle( (this.angle() - 0.01) * this.delta_time() )
+			this.position().set( 
+				this.position().x + 0.1 * this.delta_time(),
+				this.position().y + 0.1 * this.delta_time()
+			)
 		}
 	}
 }

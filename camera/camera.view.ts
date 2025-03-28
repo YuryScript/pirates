@@ -41,6 +41,7 @@ namespace $.$$ {
 			)
 		}
 
+		@ $mol_action
 		event_key( event : KeyboardEvent ) {
 			if( event.defaultPrevented ) return
 
@@ -61,8 +62,8 @@ namespace $.$$ {
 
 		@ $mol_mem
 		update() {
-			console.log('update')
-			this.position().add(new $pirates_math_vector2(0.1 * this.delta_time(), 0))
+			// console.log('update')
+			// this.position().add(new $pirates_math_vector2(0.1 * this.delta_time(), 0))
 		}
 
 		@ $mol_mem

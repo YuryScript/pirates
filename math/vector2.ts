@@ -10,7 +10,7 @@ namespace $ {
 			this.y = y;
 		}
 
-		static fromvector2(vector: $pirates_math_vector2): $pirates_math_vector2 {
+		static fromVector2(vector: $pirates_math_vector2): $pirates_math_vector2 {
 			return new $pirates_math_vector2(vector.x, vector.y);
 		}
 
@@ -188,7 +188,7 @@ namespace $ {
 		}
 
 		reflect(normal: $pirates_math_vector2): $pirates_math_vector2 {
-			normal = $pirates_math_vector2.fromvector2(normal).normalize();
+			normal = $pirates_math_vector2.fromVector2(normal).normalize();
 
 			return this.subtract(normal.scale(2 * this.dot(normal)));
 		}

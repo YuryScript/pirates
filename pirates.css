@@ -1,15 +1,23 @@
-body {
-	margin: 0;
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-	box-sizing: border-box;
+body, [pirates_camera] {
+	margin: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	overflow: hidden !important;
+	box-sizing: border-box !important;
 }
 
 [mol_view] {
 	transition-duration: 0s;
 }
 
+[pirates_block] {
+	position: absolute;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+
 [pirates_camera], [pirates_sprite] {
 	position: absolute;
+	pointer-events: none;
 }
